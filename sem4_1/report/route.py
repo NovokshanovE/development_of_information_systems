@@ -9,3 +9,14 @@ blueprint_report = Blueprint('blueprint_report', __name__, template_folder='temp
 @group_required
 def start_report():
     return render_template('report_result.html')
+
+
+@blueprint_report.route('/page1')
+@group_required
+def report_page2():
+    return render_template('report_result.html')
+
+@blueprint_report.route('/page2')
+@group_required
+def report_page2():
+    return render_template('report_result.html')
