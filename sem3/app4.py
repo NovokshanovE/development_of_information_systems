@@ -19,13 +19,13 @@ app.config['access_config'] = json.load(open('data_files/access.json'))
 @app.route('/', methods=['GET', 'POST'])
 @login_required
 def menu_choice():
-    if 'user_id' in session:
-        if session.get('user_group', None):
-            return render_template('internal_user_menu.html')
-        else:
-            return render_template('external_user_menu.html')
+    #if 'user_id' in session:
+    if session.get('user_group', None):
+        return render_template('internal_user_menu.html')
     else:
-        redirect(url_for('blueprint_auth.start_auth'))
+        return render_template('external_user_menu.html')
+    #else:
+      #  redirect(url_for('blueprint_auth.start_auth'))
    
 
 @app.route('/exit')
