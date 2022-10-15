@@ -8,4 +8,4 @@ blueprint_report = Blueprint('blueprint_report', __name__, template_folder='temp
 @blueprint_report.route('/')
 @group_required
 def start_report():
-    return render_template('report_result.html')
+    return render_template('menu_report.html')
