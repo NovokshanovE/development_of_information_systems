@@ -8,5 +8,9 @@
   ],
   "external": [
     "blueprint_market"
+  ],
+  "worker": [
+    "blueprint_market",
+    "blueprint_report"
   ]
 }

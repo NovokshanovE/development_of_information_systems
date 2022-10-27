@@ -43,7 +43,7 @@ def define_user(login: str, password: str) -> Optional[Dict]:
     user_info = None
 
     for sql_search in [sql_internal, sql_external]:
-        _user_info = select_dict(current_app.config['db_config'], sql_search)
+        _user_info = select_dict(current_app.config['dbconfig'], sql_search)
         print('_user_info=', _user_info)
         if _user_info:
             user_info = _user_info
